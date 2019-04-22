@@ -38,7 +38,7 @@ bower install froala-wysiwyg-editor
 1. Add the `froala` dependency to your Angular project. example:
  * `angular.module('myApp', ['froala'])`
 2. Create a textarea with the froala directive in your view and give it a model, where `myHtml` is a variable on `$scope`.
- * `<textarea froala ng-model="myHtml"></textarea> `
+ * `<textarea id="edit" froala ng-model="myHtml"></textarea> `
 
 ### Options
 
@@ -67,7 +67,7 @@ function myCtrl($scope){
 _view.html_
 
 ```html
-<textarea froala="froalaOptions" ng-model="myHtml"></textarea>
+<textarea id="edit" froala="froalaOptions" ng-model="myHtml"></textarea>
 ```
 
 You can pass any existing Froala option. Consult the [Froala documentation](https://www.froala.com/wysiwyg-editor/docs/options) to view the list of all the available options.
@@ -116,7 +116,7 @@ $scope.froalaOptions = {
 You can also use the editor on **img**, **button**, **input** and **a** tags:
 
 ```html
-<img froala ng-model="imgObj"/>
+<img id="sampleimg" froala ng-model="imgObj"/>
 ```
 
 The model must be an object containing the attributes for your special tags. Example:
@@ -152,7 +152,7 @@ $scope.inputOptions = {
 Sometimes you want to control when the Froala Editor will be instantiated. The directive includes a **froala-init** attributes which will provide you with the controls required to initialize and close the editor.
 
 ```html
-<div froala froala-init="myControllerFunction(initControls)"></div>
+<div id="sample-init" froala froala-init="myControllerFunction(initControls)"></div>
 ```
 
 Where *MyControllerFunction* is the name of a function in your controller which will receive an object with different methods to control the editor initialization process. It is primordial that the name of the parameter be *initControls* otherwise your function will not receive the controls.

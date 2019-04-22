@@ -68,7 +68,7 @@
 	<h1>Angular adapter for the Froala WYSIWYG editor</h1>
     <div class="sample">
       <h2>Sample 1: Inline Edit</h2>
-      <div froala="titleOptions" ng-model="myTitle"></div>
+      <div id="froala-sample-1" froala="titleOptions" ng-model="myTitle"></div>
     </div>
 
     <div class="sample">
@@ -88,21 +88,21 @@
 
     <div class="sample">
       <h2>Sample 4: Editor on 'img' tag</h2>
-      <img froala ng-model="imgModel"/>
+      <img id="froala-sample-4" froala ng-model="imgModel"/>
       <h4>Model Obj:</h4>
       <div>{{imgModel}}</div>
     </div>
 
     <div class="sample">
       <h2>Sample 5: Editor on 'button' tag</h2>
-      <button froala ng-model="buttonModel"></button>
+      <button id="froala-sample-5" froala ng-model="buttonModel"></button>
       <h4>Model Obj:</h4>
       <div>{{buttonModel}}</div>
     </div>
 
     <div class="sample">
       <h2>Sample 6: Editor on 'input' tag</h2>
-      <input froala="inputOptions" ng-model="inputModel"/>
+      <input id="froala-sample-6" froala="inputOptions" ng-model="inputModel"/>
       <h4>Model Obj:</h4>
       <div>{{inputModel}}</div>
     </div>
@@ -112,7 +112,7 @@
       <button class="manual" ng-click="linkInitControls.initialize()">Initialize Editor</button>
       <button ng-click="linkInitControls.destroy()" ng-show="linkInitControls.getEditor() != null">Close Editor</button>
       <div>
-        <a froala froala-init="initializeLink(initControls)" ng-model="linkModel">Froala Editor</a>
+        <a id="froala-sample-7" froala froala-init="initializeLink(initControls)" ng-model="linkModel">Froala Editor</a>
       </div>
       <h4>Model Obj:</h4>
       <div>{{linkModel}}</div>
